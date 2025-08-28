@@ -1,0 +1,115 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Poppins", sans-serif;
+}
+
+body {
+  background-color: #181820;
+  color: white;
+  transition: background 0.3s, color 0.3s;
+}
+
+/* Navbar */
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #111;
+  padding: 16px 50px; /* slightly more padding */
+  box-shadow: 0 3px 12px rgba(0,0,0,0.4);
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.logo {
+  font-weight: bold;
+  font-size: 1.6rem; /* slightly larger logo */
+}
+
+.nav-links {
+  list-style: none;
+  display: flex;
+  gap: 40px; /* more spacing between links */
+}
+
+.nav-links a, .hide-screen {
+  color: #ddd;
+  text-decoration: none;
+  font-size: 1.1rem; /* slightly bigger text */
+  transition: color 0.3s;
+}
+
+.nav-links a:hover {
+  color: #f44336;
+}
+
+.hide-screen {
+  color: #aaa;
+  font-style: italic;
+}
+
+/* Button */
+#modeToggle {
+  padding: 9px 18px; /* slightly bigger button */
+  border: none;
+  border-radius: 20px;
+  background: #f4f4f4;
+  color: #333;
+  cursor: pointer;
+  font-size: 1rem; /* bigger font */
+  transition: all 0.3s ease;
+}
+
+#modeToggle:hover {
+  background: #ddd;
+}
+
+/* Games Section */
+.games {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 50px; /* more spacing between cards */
+  padding: 80px; /* more padding around section */
+  justify-items: center;
+}
+
+.game-card {
+  width: 280px;  /* slightly bigger cards */
+  height: 280px;
+  background: linear-gradient(145deg, #222, #2b2b2b);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 20px; /* a little rounder */
+  cursor: pointer;
+  transition: transform 0.3s, background 0.3s, box-shadow 0.3s;
+  box-shadow: 0 6px 18px rgba(0,0,0,0.4);
+}
+
+.game-card h2 {
+  font-size: 1.5rem; /* slightly bigger text */
+}
+
+.game-card:hover {
+  transform: scale(1.08);
+  background: #333;
+  box-shadow: 0 10px 25px rgba(0,0,0,0.6);
+}
+
+/* Light Mode */
+.light-mode {
+  background: #f9f9f9;
+  color: #111;
+}
+
+.light-mode .navbar {
+  background: #fff;
+}
+
+.light-mode .game-card {
+  background: #eee;
+}
